@@ -1,0 +1,77 @@
+.btn{
+  outline: none;
+  background: linear-gradient(to right, $color-primary-dark 0%,$color-primary-light 0%, $color-primary-dark 100%);
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 100px;
+  font-size: 12px;
+  position: relative;
+  overflow: hidden;
+
+  & > *{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease;
+  }
+  &__invisible{
+    position: absolute;
+    top: -100%;
+    padding: 20px 0;
+    left: 0;
+  }
+  &__visible{
+    padding: 20px 75px;
+  }
+  &:hover &__invisible{
+    top: 0;
+  }
+  &:hover &__visible{
+    transform: translateY(100%);
+  }
+  &:hover{
+    background: linear-gradient(to right, $color-primary-dark 0%,$color-primary-light 100%, $color-primary-dark 100%);
+  }
+}
+
+
+.btn-inline{
+  outline: none;
+  font-weight: 600;
+  display: inline-block;
+  color: $color-primary;
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  border-bottom: 1px solid currentColor;
+  padding: 0 0 2px 0;
+  cursor: pointer;
+  will-change: transform;
+  @include media(450px){
+    font-size: 10px;
+  }
+  &--pulse{
+    &:hover{
+      animation: pulse 1s infinite;
+    }
+  }
+  &--arrow{
+    transition: color .2s ease;
+  }
+  &--arrow span{
+    margin-left: 3px;
+    transition: margin .2s ease;
+  }
+  &--arrow:hover{
+    color: #000;
+  }
+  &--arrow:hover span{
+    margin-left: 8px;
+  }
+
+
+}
+

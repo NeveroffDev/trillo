@@ -1,0 +1,45 @@
+.search{
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include media(500px){
+    order: 1;
+    flex: 0 0 95%;
+    margin: 10px auto 0 auto;
+
+  }
+  &__input{
+    width: 90%;
+    border-radius: 100px;
+    border: none;
+    background-color: $color-grey-light-2;
+    outline: none;
+    padding: 7px 20px;
+    transition: all .3s ease;
+    &:focus{
+      width: 100%;
+      background-color: $color-grey-light-3;
+    }
+    &::placeholder{
+      font-weight: 300;
+      color: $color-grey-light-4;
+    }
+  }
+  &__button{
+    height: 22px;
+    margin-left: -32px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:active{
+      transform: translateY(2px);
+    }
+  }
+  &__icon{
+    height: 20px;
+    width: 20px;
+    fill: $color-grey-dark-3;
+  }
+}

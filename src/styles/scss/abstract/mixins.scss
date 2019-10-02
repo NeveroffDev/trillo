@@ -1,0 +1,17 @@
+@mixin background-gradient($color1: $color-primary-light, $color2: $color-primary-dark){
+  background: linear-gradient(to right bottom, $color1, $color2) center center / cover no-repeat;
+}
+
+@mixin shadow-big{
+  box-shadow: 0 20px 60px rgba(0,0,0, .3);
+}
+
+@mixin shadow-small{
+  box-shadow: 0 20px 40px rgba(0,0,0,0.07);
+}
+
+@mixin media($resolution){
+  @media only screen and (max-width: $resolution) {
+    @content;
+  }
+}

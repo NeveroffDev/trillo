@@ -1,0 +1,28 @@
+.recommend{
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  &__count{
+    margin-right: auto;
+  }
+  &__friens{
+
+  }
+  &__photo{
+    box-sizing: content-box;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    @include media(1200px){
+      width: 35px;
+      height: 35px;
+    }
+    &:not(:last-child){
+      margin-right: -15px;
+      @include media(1200px){
+        margin-right: -20px;
+      }
+    }
+  }
+}

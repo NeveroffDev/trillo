@@ -1,0 +1,92 @@
+.side-nav {
+  font-size: 14px;
+  padding-top: 35px;
+
+  @include media(970px){
+    padding: 0;
+    display: flex;
+
+  }
+
+  &__item {
+    position: relative;
+    @include media(970px){
+      flex: 1;
+
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+      @include media(970px){
+        margin: 0;
+      }
+    }
+  }
+
+  &__item::before {
+    content: '';
+    background-color: $color-primary;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    will-change: transform;
+    transition: transform .2s,
+              width .4s cubic-bezier(1, 0, 0, 1) .2s;
+  }
+
+  &__item:hover::before,
+  &__item--active::before{
+    width: 100%;
+    transform: scaleY(1);
+  }
+
+  &__item--active::before{
+    background-color: $color-primary-light;
+  }
+
+  &__link:link,
+  &__link:visited {
+    backface-visibility: hidden;
+    position: relative;
+    color: $color-grey-light-1;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    z-index: 10;
+    @include media(970px){
+      justify-content: center;
+      padding: 20px;
+    }
+    @include media(600px){
+      flex-direction: column;
+      text-align: center;
+    }
+    @include media(500px){
+      font-size: 10px;
+    }
+    @include media(370px){
+      padding: 10px;
+    }
+
+  }
+
+  &__icon {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+    @include media(600px){
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    margin-left: 15px;
+    @include media(600px){
+      margin: 0;
+    }
+  }
+}

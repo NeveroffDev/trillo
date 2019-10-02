@@ -1,0 +1,48 @@
+.user-nav {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+
+  & > *{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    transition: background-color .3s ease;
+  }
+  & > *:hover{
+    background-color: $color-grey-light-4;
+  }
+
+  &__icon-box {
+    position: relative;
+  }
+
+  &__icon {
+    height: 23px;
+    width: 23px;
+    fill: $color-grey-dark-2;
+  }
+
+  &__notification {
+    color: #fff;
+    background-color: $color-primary;
+    font-size: 9px;
+    font-weight: 300;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    &__user-photo {
+    height: 37px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+}

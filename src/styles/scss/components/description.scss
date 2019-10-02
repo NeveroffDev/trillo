@@ -1,0 +1,49 @@
+.description{
+  margin-right: 40px;
+
+  font-size: 14px;
+  flex: 0 0 60%;
+  background-color: #fff;
+  padding: 25px;
+  @include shadow-small;
+  @include media(970px){
+    margin-right: 20px;
+    padding: 15px;
+  }
+  @include media(760px){
+    margin: 0 0 20px 0;
+  }
+
+  &__text{
+    &:not(:last-of-type){
+      margin: 0 0 20px 0;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    padding: 30px 0;
+    @include media(970px){
+      margin: 15px 0;
+      padding: 15px 0;
+    }
+    border-top: 1px solid $color-grey-light-3;
+    border-bottom: 1px solid $color-grey-light-3;
+  }
+  &__item{
+    flex: 0 0 50%;
+    &::before{
+      content: '';
+      display: inline-block;
+      margin-right: 10px;
+      width: 10px;
+      height: 10px;
+      background-color: $color-primary;
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover;
+    }
+  }
+}

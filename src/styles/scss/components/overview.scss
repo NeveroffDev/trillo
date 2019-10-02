@@ -1,0 +1,96 @@
+.overview{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $color-grey-light-3;
+  @include media(450px){
+    flex-wrap: wrap;
+  }
+  &__heading{
+    color: $color-grey-dark-1;
+    font-size: 23px;
+    line-height: 24px;
+    font-weight: 300;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    @include media(760px){
+      padding-right: 20px;
+    }
+    @include media(600px){
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 600;
+      padding-right: 10px;
+      padding-left: 20px;
+    }
+    @include media(450px){
+      padding-right: 0;
+      margin-top: -10px;
+    }
+
+  }
+  &__stars{
+    margin-right: auto;
+    display: flex;
+    @include media(450px){
+      margin-right: 20px;
+      order: 3;
+      margin-top: -45px;
+      margin-left: 15px;
+      flex:  0 0 100%;
+    }
+  }
+  &__icon-star,
+  &__icon-location{
+    width: 18px;
+    height: 18px;
+    fill: $color-primary;
+  }
+  &__icon-location{
+    margin-right: 5px;
+    @include media(450px){
+      margin-right: 0;
+    }
+  }
+  &__location{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    @include media(450px){
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__rating{
+    color: $color-grey-light-1;
+    background-color: $color-primary;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 22px;
+    @include media(600px){
+      padding: 15px;
+    }
+    @include media(450px){
+      padding: 15px 10px;
+      order: 2;
+    }
+
+  }
+  &__rating-number{
+    font-size: 23px;
+    font-weight: 300;
+    @include media(600px){
+      font-size: 20px;
+      font-weight: 400;
+    }
+    @include media(450px){
+      line-height: 1.2;
+    }
+  }
+  &__rating-votes{
+    font-size: 10px;
+    text-align: center;
+  }
+}

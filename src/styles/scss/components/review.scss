@@ -1,0 +1,68 @@
+.review{
+  background-color: #fff;
+  @include shadow-small;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  @include media(970px){
+    padding: 15px;
+  }
+  @include media(760px){
+    width: 100%;
+  }
+
+  &:not(:last-child){
+    margin-bottom: 35px;
+    @include media(970px){
+      margin-bottom: 20px;
+    }
+  }
+  &::before{
+    content: '\201C';
+    font-family: sans-serif;
+    font-size: 220px;
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    line-height: 1;
+    color: $color-grey-light-3;
+    z-index: 1;
+  }
+
+  &__text{
+    margin: 0 0 20px 0;
+    z-index: 10;
+    position: relative;
+  }
+  &__user{
+    display: flex;
+    align-items: center;
+  }
+  &__user-box{
+    margin-right: auto;
+
+    color: $color-grey-dark-1;
+  }
+  &__user-name{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  &__user-date{
+    font-size: 10px;
+  }
+
+
+  &__photo{
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &__rating{
+    font-size: 22px;
+    font-weight: 300;
+    color: $color-primary;
+  }
+}

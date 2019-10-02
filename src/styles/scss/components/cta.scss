@@ -1,0 +1,12 @@
+.cta{
+  font-size: 16px;
+  text-align: center;
+  padding: 30px 0;
+  background-color: #fff;
+  font-weight: 600;
+  color: $color-grey-dark-2;
+  &__text{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}
